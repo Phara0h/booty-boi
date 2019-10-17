@@ -706,5 +706,4 @@ var items = [
 //     return a.gp - b.gp;
 //   });
 // }
-
-module.exports = items;
+ export default items;
