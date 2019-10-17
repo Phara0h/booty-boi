@@ -5,7 +5,10 @@ module.exports = {
   ],
   pwa:{
     manifestOptions: {
-    display: 'fullscreen'
+    display: 'fullscreen',
+    name: 'Booty Boi',
+    short_name: 'Booty Boi',
+    background_color: '#303030'
   }
 }
 }
