@@ -1,4 +1,7 @@
-# looty-boi-client
+# Booty Boi
+
+Here it is [Dat Booty Boi](https://phara0h.github.io/booty-boi/)
+
 
 ## Project setup
 ```
