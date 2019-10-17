@@ -61,3 +61,5 @@ typings/
 .next
 
 loot-boi-client/node_modules
+.DS_Store
+.DS_Store
