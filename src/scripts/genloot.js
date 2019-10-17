@@ -16,7 +16,80 @@ var lootGen = {
     {
       total: 300,
       adder: 18
-    }, ];
+    },
+    {
+      total: 500,
+      adder: 30
+    },
+    {
+      total: 850,
+      adder: 50
+    },
+    {
+      total: 1350,
+      adder: 80
+    },
+    {
+      total: 2000,
+      adder: 125
+    },
+    {
+      total: 2900,
+      adder: 180
+    },
+    {
+      total: 4000,
+      adder: 250
+    },
+    {
+      total: 5700,
+      adder: 350
+    },
+    {
+      total: 8000,
+      adder: 500
+    },
+    {
+      total: 11500,
+      adder: 700
+    },
+    {
+      total: 16500,
+      adder: 1000
+    },
+    {
+      total: 25000,
+      adder: 1500
+    },
+    {
+      total: 36500,
+      adder: 2250
+    },
+    {
+      total: 54500,
+      adder: 3250
+    },
+    {
+      total: 82500,
+      adder: 5000
+    },
+    {
+      total: 128000,
+      adder: 75000
+    },
+    {
+      total: 208000,
+      adder: 12000
+    },
+    {
+      total: 355000,
+      adder: 20000
+    },
+    {
+      total: 490000,
+      adder: 35000
+    },
+  ];
 
     var ammount = (partyTreasure[level].total * multiplier) + ((size - 4) * partyTreasure[level].adder);
     console.log(xp,level,size, multiplier, ammount)
@@ -58,6 +131,9 @@ var lootGen = {
 
   pickRandomLoot: function(level, ammount)
   {
+    if(level == 20) {
+      level = 19;
+    }
     var minSameLevelConsumables = items[level].consumables[0].gp;
     var minSameLevelPermanent = items[level].permanent[0].gp;
     var maxSameLevelConsumables = items[level].consumables[items[level].consumables.length - 1].gp;
