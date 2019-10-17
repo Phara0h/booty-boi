@@ -30,3 +30,8 @@ if (process.env.NODE_ENV === 'production') {
     }
   })
 }
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  e.prompt();
+});
