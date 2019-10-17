@@ -1,5 +1,9 @@
 [{
   "relation": ["delegate_permission/common.handle_all_urls"],
-  "target" : { "namespace": "android_app", "package_name": "com.karumi.pwa",
-               "sha256_cert_fingerprints": ["D7:E7:07:87:3E:62:7C:C3:68:D6:68:75:8A:6D:E2:59:94:E1:2E:5C:6D:0C:60:E2:D3:A5:CD:24:09:41:D5:32"] }
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.phara0h.bootyboi",
+    "sha256_cert_fingerprints":
+    ["D7:E7:07:87:3E:62:7C:C3:68:D6:68:75:8A:6D:E2:59:94:E1:2E:5C:6D:0C:60:E2:D3:A5:CD:24:09:41:D5:32"]
+  }
 }]
