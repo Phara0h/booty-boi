@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.1087cc333ed9a9801aae2599201779ed.js"
+  "/pf2lootyboi/looty-boi-client/dist/precache-manifest.fea82e9a58809952826eedad3a62fc93.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "looty-boi-client"});
