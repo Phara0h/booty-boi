@@ -1,6 +1,6 @@
 # Booty Boi
 
-Here it is [Dat Booty Boi](https://phara0h.github.io/booty-boi/)
+Here comes [Dat Booty Boi](https://phara0h.github.io/booty-boi/)
 
 
 ## Project setup
