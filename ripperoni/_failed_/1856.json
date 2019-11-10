@@ -1,0 +1,5 @@
+{
+    "type": "_failed_",
+    "name": "1856",
+    "error": "Error: No parser found for page type: CLASS FEATURE 3\n    at getContentByType (/Volumes/Workspace/booty-boi/rip.js:253:9)\n    at ripPage (/Volumes/Workspace/booty-boi/rip.js:285:13)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n    at async rip (/Volumes/Workspace/booty-boi/rip.js:310:18)"
+}

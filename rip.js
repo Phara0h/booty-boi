@@ -5,7 +5,7 @@ const fs = require('fs');
 
 let time = new Date;
 let report = {
-	name: time.toString().replace(':', '-'),
+	name: time.toString().replace(/\:/g, '-'),
 	type: '_reports_',
 	itemId: 'report',
 	pass: [],
@@ -32,7 +32,7 @@ const getName = (document) => {
 	//  Second header tag with class d-flex contains the name, type and level
 	const typeHeader = document.querySelectorAll("header.d-flex");
 	const name = typeHeader[1].querySelector("h1").innerHTML.toLowerCase() || null;
-	return reEncode(name);
+	return name ? reEncode(name) : name;
 };
 
 const getLevel = (document) => {
@@ -40,7 +40,7 @@ const getLevel = (document) => {
 	const typeHeader = document.querySelectorAll("header.d-flex")[1];
 	const typeString = typeHeader.querySelector("h2").innerHTML;
 	const level = /[0-9]+/.exec(typeString);
-	return Array.isArray(level) ? level[0] : null;
+	return Array.isArray(level) ? level[0] : 0;
 };
 
 const getTraits = (document) => {
@@ -92,7 +92,7 @@ const getUsage = (document) => {
 		let usageText = /usage\s(.*);/gi.exec(striptags(usageDetails[p].innerHTML));
 		usage = Array.isArray(usageText) ? usageText[1] : usage;
 	}
-	return toCap(reEncode(usage).trim());
+	return usage ? toCap(reEncode(usage).trim()) : usage;
 };
 
 const getBulk = (document) => {
@@ -331,11 +331,12 @@ async function rip(pages = []) {
 	}
 
 	console.log(report);
+	exportContents(report);
 
 }
 
-const start = 2560;
-const stop = 3500;
+const start = 3000;
+const stop = 3100;
 const range = new Array(stop - start + 1).fill().map((_, i) => i + start);
 
 //  By all means, feed it an array of specific pages if you have one

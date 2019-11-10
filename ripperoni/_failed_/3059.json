@@ -1,0 +1,6 @@
+{
+    "type": "_failed_",
+    "pageNumber": 3059,
+    "name": null,
+    "error": "TypeError: Cannot read property 'trim' of null\n    at getUsage (/Volumes/Workspace/booty-boi/rip.js:87:21)\n    at getBaseAttributes (/Volumes/Workspace/booty-boi/rip.js:198:10)\n    at Object.parseGear [as gear] (/Volumes/Workspace/booty-boi/rip.js:213:25)\n    at getContentByType (/Volumes/Workspace/booty-boi/rip.js:252:30)\n    at ripPage (/Volumes/Workspace/booty-boi/rip.js:289:13)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n    at async rip (/Volumes/Workspace/booty-boi/rip.js:315:18)"
+}

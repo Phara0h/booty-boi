@@ -1,0 +1,6 @@
+{
+    "type": "_failed_",
+    "itemId": 3436,
+    "name": null,
+    "error": "Error: No parser found for page type: NATION\n    at getContentByType (/Volumes/Workspace/booty-boi/rip.js:270:9)\n    at ripPage (/Volumes/Workspace/booty-boi/rip.js:303:13)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n    at async rip (/Volumes/Workspace/booty-boi/rip.js:329:18)"
+}

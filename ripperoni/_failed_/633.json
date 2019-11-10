@@ -1,0 +1,5 @@
+{
+    "type": "_failed_",
+    "name": "633",
+    "error": "Error: No parser found for page type: CLERIC CLASS FEAT 8\n    at getContentByType (/Volumes/Workspace/booty-boi/rip.js:242:11)\n    at ripPage (/Volumes/Workspace/booty-boi/rip.js:274:15)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n    at async rip (/Volumes/Workspace/booty-boi/rip.js:304:20)"
+}

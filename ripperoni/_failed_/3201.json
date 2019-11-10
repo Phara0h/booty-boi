@@ -1,0 +1,6 @@
+{
+    "type": "_failed_",
+    "itemId": 3201,
+    "name": null,
+    "error": "TypeError: Cannot read property 'querySelectorAll' of null\n    at getPrice (/Volumes/Workspace/booty-boi/rip.js:65:38)\n    at getBaseAttributes (/Volumes/Workspace/booty-boi/rip.js:207:10)\n    at Object.parseItem [as item] (/Volumes/Workspace/booty-boi/rip.js:218:25)\n    at getContentByType (/Volumes/Workspace/booty-boi/rip.js:267:30)\n    at ripPage (/Volumes/Workspace/booty-boi/rip.js:303:13)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n    at async rip (/Volumes/Workspace/booty-boi/rip.js:329:18)"
+}

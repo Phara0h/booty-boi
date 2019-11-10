@@ -1,0 +1,6 @@
+{
+    "type": "_failed_",
+    "pageNumber": 2398,
+    "name": null,
+    "error": "Error: No parser found for page type: RITUAL 5\n    at getContentByType (/Volumes/Workspace/booty-boi/rip.js:256:9)\n    at ripPage (/Volumes/Workspace/booty-boi/rip.js:289:13)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n    at async rip (/Volumes/Workspace/booty-boi/rip.js:315:18)"
+}

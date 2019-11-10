@@ -1,0 +1,5 @@
+{
+    "type": "_failed_",
+    "name": "1185",
+    "error": "Error: No parser found for page type: MAGICAL TRADITION\n    at getContentByType (/Volumes/Workspace/booty-boi/rip.js:250:9)\n    at ripPage (/Volumes/Workspace/booty-boi/rip.js:282:13)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n    at async rip (/Volumes/Workspace/booty-boi/rip.js:307:18)"
+}
