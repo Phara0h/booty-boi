@@ -16,6 +16,7 @@
          label="Party Level"
          step="1"
          thumb-label="always"
+         min="1"
          max="20"
          ticks
        ></v-slider>
@@ -50,8 +51,8 @@
       <v-btn color="primary" class="btn" @click="genloot">Generate</v-btn>
       <v-btn color="secondary" class="btn" @click="clear">Clear</v-btn>
       <div  class="loots">
-      <div v-for="item in lootItems">
-        <Loot :loot="item"></Loot>
+      <div v-for="(item, index) in lootItems">
+        <Loot  v-on:delete-loot="deleteLoot" :loot="item" :index="index"></Loot>
       </div>
      </div>
     </v-content>
@@ -97,12 +98,16 @@ export default {
     }
   },
   methods: {
+    deleteLoot(index) {
+      this.lootItems.splice(index, 1);
+       localStorage.setItem("Loot",  JSON.stringify(this.lootItems));
+      console.log(index)
+    },
     genloot: function() {
       var items = lootGen.getLoots(this.xp+this.xpbonus,this.level,this.size);
       items.level = this.level;
       items.xp = this.xp;
       items.size = this.size;
-      console.log(items)
 
       this.lootItems.unshift(items);
       localStorage.setItem("Loot", JSON.stringify(this.lootItems));
