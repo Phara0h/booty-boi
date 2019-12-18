@@ -3,8 +3,9 @@
 // var partylevel = 1;
 import items from './items.js'
 var lootGen = {
-  getLoots: function(xp, level, size)
+  getLoots: function(xp, level, size, types, subTypes)
   {
+    console.log(xp,level,size,types,subTypes)
     var multiplier = (xp / 100 ) / 10;
     var partyTreasure = [
     {},
@@ -98,7 +99,7 @@ var lootGen = {
       {}
     };
     do {
-      item = this.pickRandomLoot(level, [], [], ammount);
+      item = this.pickRandomLoot(level, types, subTypes, ammount);
       if (item)
       {
         if (!loot.items[item.name])
@@ -139,7 +140,7 @@ var lootGen = {
           type = types.indexOf(i.type) > -1
         }
         if(subTypes.length > 0) {
-          subType = subtypes.indexOf(i.type) > -1
+          subType = subTypes.indexOf(i.subType) > -1
         }
         return type && subType;
       }

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.a681aec81ca17d7a6839c0cca3d84e9c.js"
+  "precache-manifest.6c51c1db29ec9c229f2364aee7519193.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "booty-boi"});

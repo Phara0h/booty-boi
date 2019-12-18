@@ -47,6 +47,29 @@
           thumb-label="always"
           max="500"
         ></v-slider>
+        <v-select
+              v-model="typeSelected"
+              :items="['consumable','permanent']"
+              chips
+              clearable
+              deletable-chips
+              label="All Types"
+              multiple
+              small-chips
+            >
+      </v-select>
+    <v-select
+          v-model="subTypeSelected"
+          :items="subTypes"
+
+          chips
+          clearable
+          deletable-chips
+          label="All Sub Types"
+          multiple
+          small-chips
+        >
+  </v-select>
 
       <v-btn color="primary" class="btn" @click="genloot">Generate</v-btn>
       <v-btn color="secondary" class="btn" @click="clear">Clear</v-btn>
@@ -74,11 +97,37 @@ export default {
         xpbonus: 0,
         level: 1,
         size: 4,
-        darkness: true
+        darkness: true,
+        subTypes: ["Ammunition",
+        "Apex",
+        "Armor",
+        "Bomb",
+        "Companion",
+        "Consumable",
+        "Elixir",
+        "Held",
+        "Oil",
+        "Poison",
+        "Potion",
+        "Rune",
+        "Scroll",
+        "Shield",
+        "Snare",
+        "Spell",
+        "Staff",
+        "Structure",
+        "Talisman",
+        "Tool",
+        "Wand",
+        "Weapon",
+        "Worn"],
+        subTypeSelected: [],
+        typeSelected: ['consumable','permanent']
       }
     },
   created() {
     this.$vuetify.theme.dark = this.darkness
+    this.subTypeSelected = [...this.subTypes]
     var items = localStorage.getItem("Loot");
     if(items) {
       this.lootItems = JSON.parse(items);
@@ -104,7 +153,8 @@ export default {
       console.log(index)
     },
     genloot: function() {
-      var items = lootGen.getLoots(this.xp+this.xpbonus,this.level,this.size);
+      console.log(this.typeSelected, this.subTypeSelected)
+      var items = lootGen.getLoots(this.xp+this.xpbonus,this.level,this.size, this.typeSelected, this.subTypeSelected);
       items.level = this.level;
       items.xp = this.xp;
       items.size = this.size;
@@ -119,7 +169,11 @@ export default {
      ,
      edgy() {
        return this.$vuetify.theme.dark = this.darkness;
-     }
+     },
+     remove (item) {
+        this.chips.splice(this.chips.indexOf(item), 1)
+        this.chips = [...this.chips]
+      },
   }
 }
 </script>
