@@ -1,6 +1,6 @@
 {
   "name": "booty-boi",
-  "version": "0.1.0",
+  "version": "1.3.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -13,6 +13,7 @@
     "vuetify": "^2.1.0"
   },
   "devDependencies": {
+    "@mdi/font": "^5.1.45",
     "@vue/cli-plugin-pwa": "^4.0.0",
     "@vue/cli-service": "^4.0.0",
     "fasquest": "^1.2.2",

@@ -3,13 +3,14 @@
     <v-app-bar app height="64">
       <v-toolbar-title class="headline text-uppercase">
         <span>Booty Boi</span>
-        <span class="font-weight-light"> - Pathfinder 2e Treasure Generator</span>
+        <span class="font-weight-light"> - PF 2e Treasure Generator</span>
 
       </v-toolbar-title>
-
+      <i style="display: flex; flex: 1; text-align: right; justify-content: flex-end;"> v1.3</i>
     </v-app-bar>
 
     <v-content class="content">
+      <a href="https://www.patreon.com/TheTipsyDragon"><img src="img/become_a_patron_button.png" height="35" data-patreon-widget-type="become-patron-button"></img></a>
       <v-switch inset color="primary"  :label="`Dark Theme`" class="dt" v-model="darkness" @change="edgy"></v-switch>
       <v-slider
          v-model="level"
@@ -47,6 +48,20 @@
           thumb-label="always"
           max="500"
         ></v-slider>
+        <v-slider
+           v-model="money_percentage"
+           color="#00BFA5"
+           hint="The amount of loot to be raw money vs magic items."
+           label="Money/Loot"
+           step="5"
+           thumb-label="always"
+           max="100"
+         >
+         <template v-slot:thumb-label="{ value }">
+           {{ value }}/{{100-value}}
+         </template>
+       </v-slider>
+
         <v-select
               v-model="typeSelected"
               :items="['consumable','permanent']"
@@ -97,6 +112,7 @@ export default {
         xpbonus: 0,
         level: 1,
         size: 4,
+        money_percentage: 0,
         darkness: true,
         subTypes: ["Ammunition",
         "Apex",
@@ -154,7 +170,7 @@ export default {
     },
     genloot: function() {
       console.log(this.typeSelected, this.subTypeSelected)
-      var items = lootGen.getLoots(this.xp+this.xpbonus,this.level,this.size, this.typeSelected, this.subTypeSelected);
+      var items = lootGen.getLoots(this.xp+this.xpbonus,this.level,this.size, this.typeSelected, this.subTypeSelected, this.money_percentage);
       items.level = this.level;
       items.xp = this.xp;
       items.size = this.size;

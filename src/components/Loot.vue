@@ -6,10 +6,19 @@
       <b>Money</b>
       <v-divider></v-divider>
       <div>
-        <span>
-          <b>{{ loot.gold }} <v-icon style="color:gold;">mdi-coin-outline</v-icon></b>,
-          <b>{{ loot.silver }} <v-icon style="color:silver;">mdi-coin-outline</v-icon></b>,
-          <b>{{ loot.copper }} <v-icon style="color:sandybrown;">mdi-coin-outline</v-icon></b>
+        <span style="color:black;">
+          <div v-if="loot.gold" class="money-wrap">
+            <b class="money-text">{{ loot.gold }}</b>
+            <div class="v-icon money-icon notranslate mdi mdi-sack theme--dark" style="color:gold;"></div>
+          </div>
+          <div v-if="loot.silver" class="money-wrap">
+            <b class="money-text">{{ loot.silver }}</b>
+            <div class="v-icon money-icon notranslate mdi mdi-sack theme--dark" style="color:silver;"></div>
+          </div>
+          <div v-if="loot.copper" class="money-wrap">
+            <b class="money-text">{{ loot.copper }}</b>
+            <div class="v-icon money-icon notranslate mdi mdi-sack theme--dark" style="color:sandybrown;"></div>
+          </div>
         </span>
       </div>
     </v-card>
@@ -81,7 +90,23 @@ export default {
     line-height: 1.5;
 
 }
+.money-wrap {
+  display: inline-block;
 
+  .money-text {
+    display: block;
+    position: relative;
+    top: 55px;
+    width: 100%;
+    font-size:10px;
+
+  }
+  .money-icon {
+    z-index: -1;
+    font-size: 65px;
+    color: sandybrown;
+  }
+}
 .loot .delete {
   cursor: pointer;
   color: #e53935;
