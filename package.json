@@ -15,7 +15,7 @@
   "devDependencies": {
     "@mdi/font": "^5.1.45",
     "@vue/cli-plugin-pwa": "^4.0.0",
-    "@vue/cli-service": "^4.0.0",
+    "@vue/cli-service": "^5.0.8",
     "fasquest": "^1.2.2",
     "html-dom-parser": "^0.2.3",
     "htmlparser2": "^4.0.0",
