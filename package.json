@@ -14,17 +14,17 @@
   },
   "devDependencies": {
     "@mdi/font": "^5.1.45",
-    "@vue/cli-plugin-pwa": "^4.0.0",
-    "@vue/cli-service": "^4.0.0",
+    "@vue/cli-plugin-pwa": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
     "fasquest": "^1.2.2",
     "html-dom-parser": "^0.2.3",
     "htmlparser2": "^4.0.0",
     "less": "^3.0.4",
-    "less-loader": "^5.0.0",
+    "less-loader": "^11.1.0",
     "sass": "^1.17.4",
-    "sass-loader": "^7.1.0",
+    "sass-loader": "^13.2.0",
     "vue-cli-plugin-vuetify": "^1.0.1",
     "vue-template-compiler": "^2.6.10",
-    "vuetify-loader": "^1.2.2"
+    "vuetify-loader": "^1.9.2"
   }
 }
