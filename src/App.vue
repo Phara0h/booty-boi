@@ -10,8 +10,8 @@
     </v-app-bar>
 
     <v-content class="content">
-      <a href="https://www.patreon.com/TheTipsyDragon"><img src="img/become_a_patron_button.png" height="35" data-patreon-widget-type="become-patron-button"></img></a>
-      <v-switch inset color="primary"  :label="`Dark Theme`" class="dt" v-model="darkness" @change="edgy"></v-switch>
+      <div id="amzn-assoc-ad-0a67fa6f-d8c6-42b8-98e7-64389a832510"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=0a67fa6f-d8c6-42b8-98e7-64389a832510"></script>
+<v-switch inset color="primary"  :label="`Dark Theme`" class="dt" v-model="darkness" @change="edgy"></v-switch>
       <v-slider
          v-model="level"
          label="Party Level"
@@ -94,6 +94,7 @@
       </div>
      </div>
     </v-content>
+    <div id="amzn-assoc-ad-0a67fa6f-d8c6-42b8-98e7-64389a832510"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=0a67fa6f-d8c6-42b8-98e7-64389a832510"></script>
   </v-app>
 
 </template>
