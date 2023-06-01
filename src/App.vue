@@ -11,7 +11,7 @@
 
     <v-content class="content">
       <v-switch inset color="primary"  :label="`Dark Theme`" class="dt" v-model="darkness" @change="edgy"></v-switch>
-      <div id="amzn-assoc-ad-0fb57ed7-b23e-4c78-9e76-77ebd6811ae7" style="display: flex; flex-direction: row; align-content: center; justify-content: center; align-items: center;"></div>
+      <div id="amzn-assoc-ad-0fb57ed7-b23e-4c78-9e76-77ebd6811ae7" style="max-height: 200px; margin-bottom: 40px; display: flex; flex-direction: row; align-content: center; justify-content: center; align-items: center;"></div>
       <v-slider
          v-model="level"
          label="Party Level"
