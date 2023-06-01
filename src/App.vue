@@ -10,7 +10,7 @@
     </v-app-bar>
 
     <v-content class="content">
-      <div id="amzn-assoc-ad-0fb57ed7-b23e-4c78-9e76-77ebd6811ae7"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=0fb57ed7-b23e-4c78-9e76-77ebd6811ae7"></script>
+      <div id="amzn-assoc-ad-0fb57ed7-b23e-4c78-9e76-77ebd6811ae7"></div>
 <v-switch inset color="primary"  :label="`Dark Theme`" class="dt" v-model="darkness" @change="edgy"></v-switch>
       <v-slider
          v-model="level"
@@ -91,7 +91,7 @@
       <div  class="loots">
       <div v-for="(item, index) in lootItems">
         <Loot  v-on:delete-loot="deleteLoot" :loot="item" :index="index"></Loot>
-        <div id="amzn-assoc-ad-0fb57ed7-b23e-4c78-9e76-77ebd6811ae7"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=0fb57ed7-b23e-4c78-9e76-77ebd6811ae7"></script>
+        <div id="amzn-assoc-ad-0fb57ed7-b23e-4c78-9e76-77ebd6811ae7"></div>
       </div>
      </div>
     </v-content>
