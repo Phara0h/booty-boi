@@ -11,7 +11,9 @@
 
     <v-content class="content">
       <v-switch inset color="primary"  :label="`Dark Theme`" class="dt" v-model="darkness" @change="edgy"></v-switch>
-      <div id="amzn-assoc-ad-0fb57ed7-b23e-4c78-9e76-77ebd6811ae7" style="margin-bottom: 40px; width:100%; display:block;"></div>
+      <script type="text/javascript" src="https://udbaa.com/bnr.php?section=General&pub=116515&format=468x60&ga=g"></script>
+<noscript><a href="https://yllix.com/publishers/116515" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub/468x60.png" style="border:none;margin:0;padding:0;vertical-align:baseline;margin-bottom: 40px; width:100%; display:block;" alt="ylliX - Online Advertising Network" /></a></noscript>
+
       <v-slider
          v-model="level"
          label="Party Level"
