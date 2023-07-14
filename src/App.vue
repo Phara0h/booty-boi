@@ -11,7 +11,9 @@
 
     <v-content class="content">
       <v-switch inset color="primary"  :label="`Dark Theme`" class="dt" v-model="darkness" @change="edgy"></v-switch>
-<noscript><a href="https://yllix.com/publishers/116515" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub/468x60.png" style="border:none;margin:0;padding:0;vertical-align:baseline;margin-bottom: 40px; width:100%; display:block;" alt="ylliX - Online Advertising Network" /></a></noscript>
+
+<iframe :src="ads_link" width="468" height="60" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts" style="margin-bottom: 48px; width:468px !important;height:60px !important;">
+</iframe>
 
       <v-slider
          v-model="level"
@@ -105,10 +107,13 @@
 import lootGen from './scripts/genloot.js'
 import Loot from './components/Loot.vue'
 
+
 export default {
   name: 'app',
   data() {
+    
       return {
+        ads_link: "https://udbaa.com/bnr_xload.php?section=General&pub=116515&format=468x60&ga=g&xt=168935386398630&xtt="+Math.round(Math.random() * 10000000),
         lootItems: [],
         xp: 80,
         xpbonus: 0,
@@ -151,7 +156,13 @@ export default {
       this.lootItems = JSON.parse(items);
     }
 
+
   },
+  mounted() {
+      let recaptchaScript = document.createElement('script')
+      recaptchaScript.setAttribute('src', 'https://udbaa.com/bnr.php?section=General&pub=116515&format=468x60&ga=g')
+      document.head.appendChild(recaptchaScript)
+    },
   components: {
     Loot
   },
