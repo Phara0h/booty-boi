@@ -7,6 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "booty-boi": "file:",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
     "vue-material": "^1.0.0-beta-11",

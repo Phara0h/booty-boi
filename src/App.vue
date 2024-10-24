@@ -12,9 +12,6 @@
     <v-content class="content">
       <v-switch inset color="primary"  :label="`Dark Theme`" class="dt" v-model="darkness" @change="edgy"></v-switch>
 
-<iframe :src="ads_link" width="468" height="60" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts" style="margin-bottom: 48px; width:468px !important;height:60px !important;">
-</iframe>
-
       <v-slider
          v-model="level"
          label="Party Level"
